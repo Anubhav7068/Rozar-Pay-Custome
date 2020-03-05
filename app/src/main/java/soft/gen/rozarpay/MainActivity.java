@@ -1,7 +1,6 @@
 package soft.gen.rozarpay;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,10 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.razorpay.Checkout;
 import com.razorpay.PaymentResultListener;
-
 import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity implements PaymentResultListener {
@@ -60,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements PaymentResultList
         /**
          * Pass your payment options to the Razorpay Checkout as a JSONObject
          */
+        
         try {
             JSONObject options = new JSONObject();
 
@@ -67,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements PaymentResultList
              * Merchant Name
              * eg: ACME Corp || HasGeek etc.
              */
+            
             options.put("name", "Khush Sharma");
             /**
              * Amount is always passed in currency subunits
@@ -82,9 +81,11 @@ public class MainActivity extends AppCompatActivity implements PaymentResultList
 
     @Override
     public void onPaymentSuccess(String razorpayPaymentID) {
+        
         /**
          * Add your logic here for a successful payment response
          */
+        
         Toast.makeText(this, "successful payment", Toast.LENGTH_SHORT).show();
     }
 
