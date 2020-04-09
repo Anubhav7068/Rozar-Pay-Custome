@@ -3,8 +3,8 @@
     package="soft.gen.rozarpay">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <application
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <!--<application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -20,13 +20,37 @@
             </intent-filter>
 
         </activity>
+        <activity android:name=".PaymentOptions" />
+        <activity android:name=".PaymentActivity" />
 
-        <!-- Add your API key here -->
+        &lt;!&ndash; Add your API key here &ndash;&gt;
 
         <meta-data
             android:name="com.razorpay.ApiKey"
             android:value="rzp_test_FibWdhtgn2Hhf2"></meta-data>
 
+    </application>-->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Razorpay Sample App"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".PaymentActivity"
+            android:label="Razorpay Payment">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_FibWdhtgn2Hhf2" />
+        <activity android:name=".PaymentOptions" />
     </application>
 
 </manifest>
