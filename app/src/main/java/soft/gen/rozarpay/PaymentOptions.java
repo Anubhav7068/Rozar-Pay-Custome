@@ -242,7 +242,7 @@ public class PaymentOptions extends Activity implements PaymentResultListener {
             try {
                 payload = new JSONObject("{currency: 'INR'}");
                 payload.put("amount", "100");
-                payload.put("contact", "6392149949");
+                payload.put("contact", "9999999999");
                 payload.put("email", "customer@name.com");
             } catch (Exception e) {
                 e.printStackTrace();
@@ -272,7 +272,7 @@ public class PaymentOptions extends Activity implements PaymentResultListener {
             try {
                 payload = new JSONObject("{currency: 'INR'}");
                 payload.put("amount", "100");
-                payload.put("contact", "6392149949");
+                payload.put("contact", "9999999999");
                 payload.put("email", "customer@name.com");
             } catch (Exception e) {
                 e.printStackTrace();
